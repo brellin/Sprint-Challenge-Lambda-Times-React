@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 
+import '../CSS/index.css';
+
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -33,10 +35,7 @@ export default class Login extends Component {
             <div className='fade'>
                 <div className='login'>
                     <h1>Log In:</h1>
-                    <form
-                        onSubmit={this.login}
-                        className='login'
-                    >
+                    <form onSubmit={this.login}>
                         <input
                             placeholder='Username'
                             name='username'

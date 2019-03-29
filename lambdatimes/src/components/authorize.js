@@ -5,10 +5,9 @@ const authorize = Login => ContentPage =>
         constructor() {
             super();
             this.state = {
-                loggedIn: false
+                loggedIn: localStorage.getItem('user') === null ? false : true
             }
         }
-
         login = () => {
             this.setState({
                 loggedIn: true
