@@ -1,23 +1,22 @@
 import React from 'react';
-
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
+import Div from './styled/Div'
+import { Span } from './styled/Span'
 
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
+    <Div topBar>
+      <Div container>
+        <Div containerLeft>
+          <Span topBarLeft>TOPICS</Span><Span topBarLeft>SEARCH</Span>
+        </Div>
+        <Div containerCenter>
+          <Span topBarCenter>GENERAL</Span><Span topBarCenter>BROWNBAG</Span><Span topBarCenter>RANDOM</Span><Span topBarCenter>MUSIC</Span><Span topBarCenter>ANNOUNCEMENTS</Span>
+        </Div>
+        <Div containerRight>
+          <Span>LOG IN</Span>
+        </Div>
+      </Div>
+    </Div>
   )
 }
 
